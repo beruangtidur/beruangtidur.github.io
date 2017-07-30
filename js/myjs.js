@@ -46,6 +46,18 @@ function active(e){
     e.classList.add('active');
   }
 
+// inactive class
+window.onclick = function(event) {
+                  if (!event.target.matches('nav a')) {
+                     for (var m = 0; m < anchor.length; m++) {
+                       if (anchor[m].classList.contains('active')) {
+                         anchor[m].classList.remove('active');
+                       }
+                     }
+                  }
+                 }
+
+//scroll into specified element
 var posY =0,
     interval = 30;
 
