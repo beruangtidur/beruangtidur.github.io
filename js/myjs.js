@@ -39,21 +39,14 @@ var navI =  document.querySelectorAll('nav li a');
 for (var z = 0; z < navI.length; z++) {
   navI[z].setAttribute('href', 'javascript:void(0)');
 }
-function active(e){
-  for (var y = 0; y < anchor.length; y++) {
-      if (anchor[y].classList.contains('active')) {
-        anchor[y].classList.remove('active');
-      }
-    }
-    e.classList.add('active');
-  }
-
 
 // active class when scroll into specified div
 function scrollActive() {
   recentPos();
     if (posY < document.getElementById('about').offsetTop) {
-      anchor[0].classList.remove('active');
+      for (var i = 0; i < anchor.length; i++) {
+        anchor[i].classList.remove('active');
+      }
     }
     if (posY >= document.getElementById('about').offsetTop) {
       anchor[0].classList.add('active');
@@ -69,16 +62,6 @@ function scrollActive() {
       anchor[1].classList.remove('active');
     }
   }
-// inactive class when click window
-window.onclick = function(event) {
-                  if (!event.target.matches('nav a')) {
-                     for (var m = 0; m < anchor.length; m++) {
-                       if (anchor[m].classList.contains('active')) {
-                         anchor[m].classList.remove('active');
-                       }
-                     }
-                  }
-                 }
 // -------------------------end active class-------------------------------------------//
 
 
@@ -97,7 +80,7 @@ var posY =0,
 // scrollDown
 //
 function scrollDown(id){
-  var target = document.getElementById(id).offsetTop - 60;
+  var target = document.getElementById(id).offsetTop;
 
   var scrollAnimate = setTimeout(function(){
                           scrollDown(id);
@@ -114,7 +97,7 @@ function scrollDown(id){
 // scrollUp
 //
 function scrollUp(id){
-  var target = document.getElementById(id).offsetTop - 50;
+  var target = document.getElementById(id).offsetTop;
 
   var scrollAnimate = setTimeout(function(){
                           scrollUp (id);
@@ -140,3 +123,17 @@ function fixedNav() {
   };
 }
 // -------------------------end fixedNav when scroll-------------------------------------------//
+
+
+//
+// call function
+//
+
+window.onscroll = function() {
+  fixedNav();
+  scrollActive();
+}
+
+anchor[0].onclick = function() {scrollDown('about');scrollUp('about') }
+anchor[1].onclick = function() {scrollDown('blog');scrollUp('blog') }
+anchor[2].onclick = function() {scrollDown('special');scrollUp('special') }
