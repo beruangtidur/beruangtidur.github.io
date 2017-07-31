@@ -1,4 +1,7 @@
-var slideIndex = 1,
+//
+//SLIDESHOW
+//
+ar slideIndex = 1,
     imgTarget  = document.getElementsByClassName("slideshow"),
     counter    = 0;
 
@@ -28,7 +31,6 @@ setInterval(function() {
                 plusDivs(1);
               }
             }, 1000);
-
 // -------------------------end slideshow-------------------------------------------//
 
 
@@ -66,7 +68,7 @@ function scrollActive() {
 
 
 // recentPos
-var posY =0,
+var posY     = 0,
     interval = 30;
 
     function recentPos(){
@@ -102,11 +104,11 @@ function scrollUp(id){
   var scrollAnimate = setTimeout(function(){
                           scrollUp (id);
                       },0);
-  if (posY > target){
-    posY = posY - interval ;
-    window.scrollTo(0, posY);
-  }else if (posY <= target){
-    clearTimeout(scrollAnimate);
+  if (posY <= target) {
+      clearTimeout(scrollAnimate);
+  } else {
+    posY = posY - interval;
+    window.scrollTo(0,posY);
   }
 }
 // -------------------------end scroll into specified element-------------------------------------------//
@@ -126,7 +128,7 @@ function fixedNav() {
 
 
 //
-// call function
+// call a function
 //
 
 window.onscroll = function() {
