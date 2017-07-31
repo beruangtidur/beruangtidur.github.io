@@ -1,4 +1,3 @@
-//global variable
 var slideIndex = 1,
     imgTarget  = document.getElementsByClassName("slideshow"),
     counter    = 0;
@@ -30,6 +29,9 @@ setInterval(function() {
               }
             }, 1000);
 
+// -------------------------end slideshow-------------------------------------------//
+
+
 // active class
 var anchor    = document.querySelectorAll('nav a');
 var navI =  document.querySelectorAll('nav li a');
@@ -46,7 +48,28 @@ function active(e){
     e.classList.add('active');
   }
 
-// inactive class
+
+// active class when scroll into specified div
+function scrollActive() {
+  recentPos();
+    if (posY < document.getElementById('about').offsetTop) {
+      anchor[0].classList.remove('active');
+    }
+    if (posY >= document.getElementById('about').offsetTop) {
+      anchor[0].classList.add('active');
+      anchor[1].classList.remove('active');
+    }
+    if(posY >= document.getElementById('blog').offsetTop) {
+      anchor[1].classList.add('active');
+      anchor[0].classList.remove('active');
+      anchor[2].classList.remove('active');
+    }
+    if(posY >= document.getElementById('special').offsetTop) {
+      anchor[2].classList.add('active');
+      anchor[1].classList.remove('active');
+    }
+  }
+// inactive class when click window
 window.onclick = function(event) {
                   if (!event.target.matches('nav a')) {
                      for (var m = 0; m < anchor.length; m++) {
@@ -56,8 +79,10 @@ window.onclick = function(event) {
                      }
                   }
                  }
+// -------------------------end active class-------------------------------------------//
 
-//scroll into specified element
+
+// recentPos
 var posY =0,
     interval = 30;
 
@@ -67,8 +92,6 @@ var posY =0,
 
       return posY
     }
-window.onscroll = function () {recentPos()};
-// end deteksi posisi sekarang
 
 //
 // scrollDown
@@ -103,17 +126,17 @@ function scrollUp(id){
     clearTimeout(scrollAnimate);
   }
 }
+// -------------------------end scroll into specified element-------------------------------------------//
 
-//
-// FixedNav
-//
-window.onscroll = function() {
+
+function fixedNav() {
   recentPos();
   var header = document.getElementById('header');
   var nav    = document.getElementsByTagName('nav');
   if (posY > header.offsetHeight) {
-    nav[0].className = 'fixedNav';
+    nav[0].classList.add('fixedNav');
   } else {
-    nav[0].className = '';
-  }
-};
+    nav[0].classList.remove('fixedNav');
+  };
+}
+// -------------------------end fixedNav when scroll-------------------------------------------//
