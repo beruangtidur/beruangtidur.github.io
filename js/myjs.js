@@ -1,7 +1,7 @@
 //
 //SLIDESHOW
 //
-ar slideIndex = 1,
+var slideIndex = 1,
     imgTarget  = document.getElementsByClassName("slideshow"),
     counter    = 0;
 
