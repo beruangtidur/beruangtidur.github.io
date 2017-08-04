@@ -36,11 +36,11 @@ setInterval(function() {
 
 // active class
 var anchor    = document.querySelectorAll('nav a');
-var navI =  document.querySelectorAll('nav li a');
-
-for (var z = 0; z < navI.length; z++) {
-  navI[z].setAttribute('href', 'javascript:void(0)');
-}
+// var navI =  document.querySelectorAll('nav li a');
+//
+// for (var z = 0; z < navI.length; z++) {
+//   navI[z].setAttribute('href', 'javascript:void(0)');
+// }
 
 // active class when scroll into specified div
 function scrollActive() {
@@ -65,82 +65,54 @@ function scrollActive() {
     }
   }
 // -------------------------end active class-------------------------------------------//
-
-
-    var smoothScr = {
-        iterr         : 30, // set timeout miliseconds ..decreased with 1ms for each iteration
-        tm            : null, //timeout local variable
-        stopShow      : function(){
-                          clearTimeout(this.tm); // stop the timeout
-                          this.iterr = 30; // reset milisec iterator to original value
-                        },
-        getRealTop    : function (el){ // helper function instead of jQuery
-                          var elm = el;
-                          var realTop = 0;
-                          do{
-                            realTop += elm.offsetTop;
-                            elm = elm.offsetParent;
-                          }
-                          while(elm);
-                          return realTop;
-                        },
-        getPageScroll : function(){  // helper function instead of jQuery
-                          var pgYoff = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
-                          return pgYoff;
-                        },
-        anim          : function(id){ // the main func
-
-                          this.stopShow(); // for click on another button or link
-                          var eOff, pOff, tOff, scrVal, pos, dir, step;
-
-                          eOff = document.getElementById(id).offsetTop; // element offsetTop
-
-                          tOff =  this.getRealTop(document.getElementById(id).parentNode); // terminus point
-
-                          pOff = this.getPageScroll(); // page offsetTop
-
-                          if (pOff === null || isNaN(pOff) || pOff === 'undefined') pOff = 0;
-
-                          scrVal = eOff - pOff; // actual scroll value;
-
-                          if (scrVal > tOff){
-                            pos = (eOff - tOff - pOff);
-                            dir = 1;
-                          }
-                          if (scrVal < tOff){
-                            pos = (pOff + tOff) - eOff;
-                            dir = -1;
-                          }
-                          if(scrVal !== tOff){
-                            step = ~~((pos / 4) +1) * dir;
-
-                            if(this.iterr > 1) this.iterr -= 1;
-                            else this.itter = 0; // decrease the timeout timer value but not below 0
-
-                            window.scrollBy(0, step);
-                            this.tm = window.setTimeout(function(){
-                               smoothScr.anim(id);
-                            }, this.iterr);
-                          }
-                          if(scrVal === tOff){
-                            this.stopShow(); // reset function values
-                            return;
-                          }
-        }
-    }
-// -------------------------end scroll into specified element-------------------------------------------//
-
-
 // recentPos
 var posY     = 0,
     interval = 20;
 
     function recentPos(){
       document.documentElement.scrollTop;document.body.scrollTop;
-      posY = document.body.scrollTop || document.documentElement.scrollTop ;
+      posY = document.body.scrollTop || document.documentElement.scrollTop || self.pageYOffset;
 
       return posY
     }
+
+    function elmYPosition(eID) {
+        var elm = document.getElementById(eID);
+        var y = elm.offsetTop;
+        var node = elm;
+        while (node.offsetParent && node.offsetParent != document.body) {
+            node = node.offsetParent;
+            y += node.offsetTop;
+        } return y;
+    }
+    function smoothScroll(eID) {
+        var startY = recentPos();
+        var stopY = elmYPosition(eID);
+        var distance = stopY > startY ? stopY - startY : startY - stopY;
+        if (distance < 100) {
+            scrollTo(0, stopY); return;
+        }
+        var speed = Math.round(distance / 100);
+        if (speed >= 20) speed = 20;
+        var step = Math.round(distance / 25);
+        var leapY = stopY > startY ? startY + step : startY - step;
+        var timer = 0;
+        if (stopY > startY) {
+            for ( var i=startY; i<stopY; i+=step ) {
+                setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+            } return;
+        }
+        for ( var i=startY; i>stopY; i-=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+        }
+    }
+
+// -------------------------end scroll into specified element-------------------------------------------//
+
+
+
 
 function fixedNav() {
   recentPos();
@@ -163,6 +135,6 @@ window.onscroll = function() {
   scrollActive();
 }
 
-anchor[0].onclick = function() {smoothScr.anim('about');}
-anchor[1].onclick = function() {smoothScr.anim('blog');}
-anchor[2].onclick = function() {smoothScr.anim('special');}
+anchor[0].onclick = function() {smoothScroll('about'); return false;}
+anchor[1].onclick = function() {smoothScroll('blog'); return false;}
+anchor[2].onclick = function() {smoothScroll('special'); return false;}
