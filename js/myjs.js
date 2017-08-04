@@ -76,8 +76,8 @@ var posY     = 0,
       return posY
     }
 
-    function elmYPosition(eID) {
-        var elm = document.getElementById(eID);
+    function targetPos(id) {
+        var elm = document.getElementById(id);
         var y = elm.offsetTop;
         var node = elm;
         while (node.offsetParent && node.offsetParent != document.body) {
@@ -85,9 +85,9 @@ var posY     = 0,
             y += node.offsetTop;
         } return y;
     }
-    function smoothScroll(eID) {
+    function smoothScroll(id) {
         var startY = recentPos();
-        var stopY = elmYPosition(eID);
+        var stopY = targetPos(id);
         var distance = stopY > startY ? stopY - startY : startY - stopY;
         if (distance < 100) {
             scrollTo(0, stopY); return;
@@ -110,8 +110,6 @@ var posY     = 0,
     }
 
 // -------------------------end scroll into specified element-------------------------------------------//
-
-
 
 
 function fixedNav() {
