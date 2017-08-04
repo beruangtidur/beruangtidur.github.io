@@ -34,15 +34,9 @@ setInterval(function() {
 // -------------------------end slideshow-------------------------------------------//
 
 
-// active class
-var anchor    = document.querySelectorAll('nav a');
-// var navI =  document.querySelectorAll('nav li a');
-//
-// for (var z = 0; z < navI.length; z++) {
-//   navI[z].setAttribute('href', 'javascript:void(0)');
-// }
-
 // active class when scroll into specified div
+var anchor    = document.querySelectorAll('nav a');
+
 function scrollActive() {
   recentPos();
     if (posY < document.getElementById('about').offsetTop) {
@@ -65,6 +59,8 @@ function scrollActive() {
     }
   }
 // -------------------------end active class-------------------------------------------//
+
+
 // recentPos
 var posY     = 0,
     interval = 20;
@@ -75,7 +71,6 @@ var posY     = 0,
 
       return posY
     }
-
     function targetPos(id) {
         var elm = document.getElementById(id);
         var y = elm.offsetTop;
@@ -108,7 +103,6 @@ var posY     = 0,
             leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
         }
     }
-
 // -------------------------end scroll into specified element-------------------------------------------//
 
 
