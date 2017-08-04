@@ -209,9 +209,12 @@ nav li:first-child::before{
 #blog .line{
   background: #fff;
 }
-/*end about section*/
+/*end blog section*/
 
-
+#special{
+  height: 80%;
+}
+/*end special section*/
 #footer .wrap-content{
   padding: 20px 0;
   border-top: 2px solid rgba(45, 45, 45, 0.6);
