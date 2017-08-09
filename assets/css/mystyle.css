@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
+
+*{
+  margin:0;padding:0;
+  box-sizing: border-box;
+}
+*::selection{
+  background: #68b11f;
+}
+*::-moz-selection{
+  background: #68b11f;
+  color:white;
+}
+*::-webkit-selection{
+  background: #68b11f;
+  color:white;
+}
+*::-ms-selection{
+  background: #68b11f;
+  color:white;
+}
+/* SELECTION*/
+ul,ol{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #303030;
+  font-weight: bold;
+}
+a:hover{
+  text-decoration: underline;
+}
+html,body{
+  font-size: 100%;
+  font-family: 'Love Ya Like A Sister', cursive;
+  line-height: 1;
+  text-align: center;
+  color: #303030;
+}
+/* END CSS RESET*/
+
+/*======================================================================*/
+
+.title-section{
+  font-weight: normal;
+  font-size: 2.3rem;
+  padding-bottom: 30px;
+}
+.desk{
+  font-size: 1.2rem;
+}
+.container{
+  width: 90vw;
+  margin: auto;
+}
+.line-break{
+  width: 50vw;
+  border: 2px dashed #303030;
+  margin: 30px auto;
+}
+/* GLOBAL USE*/
+
+
+.site-wrapper{
+  width: 100vw;
+  padding-top: 50px;
+}
+blockquote{
+  display: inline-block;
+  background: #fefefe;
+  border-left: 5px solid #bf6a1c;
+  margin: 1rem 1rem 0 1rem;
+  padding: 1.5rem 1rem;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+blockquote p {
+  display: inline-block;
+}
+blockquote p::before{
+  content: 'As Good as Humans are Useful for Others';
+}
+blockquote::before{
+  display: inline-block;
+  content: open-quote;
+  font-size: 2.5rem;
+  margin: -5px;
+}
+blockquote::after{
+  display: inline-block;
+  content: close-quote;
+  font-size: 2.5rem;
+  margin: -10px;
+}
+/* END HOME SECTION*/
+
+.line-break:nth-child(4){
+  border: 1px solid;
+}
+#footer{
+  padding-bottom: 20px;
+}
+.made::before{
+  content: '{ }';
+  font-size: 1.5rem;
+}
+.happy::before{
+  content: '(^-^)';
+  font-size: 1.2rem;
+}
+.love{
+  background: url('../img/icons/love.png') no-repeat;
+  background-size: 15px auto;
+  background-position:2px 0;
+  display: inline-block;
+  width: 20px;
+  height: 15px;
+}
+/* END CONTACT AND FOOTER SECTION*/
+
+
+/*================= RESPONSIVE MODE ===============*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-device-width : 360px) {
+  html,body{
+    font-size:14px;
+  }
+  .line-break:nth-child(4){
+    width: 90vw;
+  }
+}
