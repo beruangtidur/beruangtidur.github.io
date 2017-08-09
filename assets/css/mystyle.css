@@ -35,7 +35,6 @@ html,body{
   font-size: 100%;
   font-family: 'Love Ya Like A Sister', cursive;
   line-height: 1;
-  text-align: center;
   color: #303030;
 }
 /* END CSS RESET*/
@@ -65,6 +64,7 @@ html,body{
 .site-wrapper{
   width: 100vw;
   padding-top: 50px;
+  text-align: center;
 }
 blockquote{
   display: inline-block;
