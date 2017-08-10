@@ -5,18 +5,19 @@
   box-sizing: border-box;
 }
 *::selection{
-  background: #68b11f;
+  background: crimson;
+  color:white;
 }
 *::-moz-selection{
-  background: #68b11f;
+  background: crimson;
   color:white;
 }
 *::-webkit-selection{
-  background: #68b11f;
+  background: crimson;
   color:white;
 }
 *::-ms-selection{
-  background: #68b11f;
+  background: crimson;
   color:white;
 }
 /* SELECTION*/
@@ -25,7 +26,7 @@ ul,ol{
 }
 a{
   text-decoration: none;
-  color: #303030;
+  color: #222222;
   font-weight: bold;
 }
 a:hover{
@@ -34,7 +35,9 @@ a:hover{
 html,body{
   font-family: 'Love Ya Like A Sister', cursive;
   line-height: 1;
-  color: #303030;
+  background-color: ghostwhite;
+  color: #222222;
+  width: 100%;
 }
 /* END CSS RESET*/
 
@@ -54,21 +57,23 @@ html,body{
 }
 .line-break{
   width: 50vw;
-  border: 2px dashed #303030;
+  border: 2px dashed #222222;
   margin: 30px auto;
 }
 /* GLOBAL USE*/
 
 
 .site-wrapper{
-  width: 100vw;
   padding-top: 50px;
   text-align: center;
 }
+/* END HOME SECTION*/
+
+
 blockquote{
   display: inline-block;
-  background: #fefefe;
-  border-left: 5px solid #bf6a1c;
+  background: #eee;
+  border-left: 5px solid crimson;
   margin: 1rem 1rem 0 1rem;
   padding: 1.5rem 1rem;
   font-size: 1.5rem;
@@ -90,7 +95,8 @@ blockquote::after{
   content: close-quote;
   font-size: 2.5rem;
 }
-/* END HOME SECTION*/
+/* END QUOTE*/
+
 
 .line-break:nth-child(4){
   border: 1px solid;
@@ -101,10 +107,12 @@ blockquote::after{
 .made::before{
   content: '{ }';
   font-size: 1.5rem;
+  color: darkcyan;
 }
 .happy::before{
   content: '(^-^)';
   font-size: 1.2rem;
+  color: crimson;
 }
 .love{
   background: url('../img/icons/love.png') no-repeat;
