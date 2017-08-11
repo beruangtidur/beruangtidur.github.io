@@ -26,7 +26,6 @@ ul,ol{
 }
 a{
   text-decoration: none;
-  color: #222222;
   font-weight: bold;
 }
 a:hover{
@@ -36,7 +35,7 @@ html,body{
   font-family: 'Love Ya Like A Sister', cursive;
   line-height: 1;
   background-color: ghostwhite;
-  color: #222222;
+  color: #4e4e4e;
   width: 100%;
 }
 /* END CSS RESET*/
@@ -57,7 +56,7 @@ html,body{
 }
 .line-break{
   width: 50vw;
-  border: 2px dashed #222222;
+  border: 2px dashed #4e4e4e;
   margin: 30px auto;
 }
 /* GLOBAL USE*/
