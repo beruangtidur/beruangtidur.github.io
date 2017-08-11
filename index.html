@@ -8,9 +8,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/mystyle.css">
 
-    <!--  FONT AWESOME-->
-    <!-- <script src="https://use.fontawesome.com/7421efd691.js"></script> -->
-
   </head>
   <body>
     <div class="site-wrapper">
@@ -28,7 +25,7 @@
       <!-- END HOME SECTION -->
 
       <div class="line-break"></div>
-      
+
       <section id="contact">
         <div class="container">
           <h1 class="title-section">Kalo mau nanya atau kenalan</h1>
@@ -55,7 +52,13 @@
     </div>
 
     <!-- JS -->
-    <script src="assets/js/myjs.js"></script>
+    <script>
+      var anchor = document.querySelectorAll('a');
+      for (var i = 0; i < anchor.length; i++) {
+        anchor[i].setAttribute('target', '_blank');
+      }
+      // give target _blank to all link
+    </script>
     <!-- Jiaah ngeliatin code mulu, Jomblo ya? hihihihi -->
   </body>
 </html>
