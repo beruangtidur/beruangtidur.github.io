@@ -97,7 +97,7 @@ blockquote::after{
 /* END QUOTE*/
 
 
-.line-break:nth-child(4){
+.last-break{
   border: 1px solid;
 }
 #footer{
@@ -132,7 +132,7 @@ blockquote::after{
   html,body{
     font-size:13px;
   }
-  .line-break:nth-child(4){
+  .last-break{
     width: 90vw;
   }
 }
