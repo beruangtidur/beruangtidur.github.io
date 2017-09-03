@@ -11,45 +11,51 @@
   </head>
   <body>
     <div class="site-wrapper">
+      <div class="control prev" onclick="prevSlide()">
+        &lang;&lang;
+      </div>
+      <div class="control next" onclick="nextSlide()">
+        &rang;&rang;
+      </div>
 
       <section id="home">
         <div class="container">
-          <h1 class="title-section">Hai ! saya Naufal Hafizhan. . .</h1>
-          <p class="desk">
-            orangnya kalem, simpel, gak ribet, dan gak terlalu banyak mikir. Pokoknya yang baik-baik :).<br>
-            liat project2 saya di <a href="https://www.github.com/naufalhfzhn" style="color: blueviolet;">github/naufalhfzhn</a>
-            <!-- end github -->
-            dan kalo mau baca2 di <a href="https://naufalhfzhn.000webhostapp.com" style="color: #7caf00;">naufalhfzhn/notes</a>
+          <div class="left-side">
+            <h1 class="big-hero">HAI!! </h1>
+          </div>
+          <div class="right-side">
+            <h1 class="title-section">saya Naufal Hafizhan... </h1>
+            <p class="desk">
+              orangnya kalem, simpel, gak ribet, dan gak terlalu banyak mikir. <br>Pokoknya yang baik-baik :).<br><br>
+              liat project2 saya di <a href="https://www.github.com/naufalhfzhn" class="btn mix-blend">github/naufalhfzhn</a><br>
+              <!-- end github -->
+              dan kalo mau baca2 di <a href="https://naufalhfzhn.000webhostapp.com" class="btn mix-blend">naufalhfzhn/notes</a>
+          </div>
             <!-- end notes -->
           </p>
         </div>
       </section>
       <!-- END HOME SECTION -->
 
-      <div class="line-break"></div>
-
       <section id="contact">
         <div class="container">
           <h1 class="title-section">Kalo mau nanya atau kenalan</h1>
-          email aja ke : <a href="mailto:raden.naufal123@gmail.com" style="color: darkcyan;" class="desk">raden.naufal123@gmail.com</a>
+          <p class="desk">email aja ke : <a href="mailto:raden.naufal123@gmail.com" style="color: yellow;" class="btn">raden.naufal123@gmail.com</a></p>
           <!-- end Gmail -->
-          <div class="line-break"></div>
           <h1 class="title-section">Nah kalo mau liat2 atau stalking2 gitu</h1>
-          <p class="desk"> bisa di <a href="https://www.instagram.com/naufalhfzhn" style="color: orange;">instagram/naufalhfzhn </a></p>
+          <p class="desk"> bisa di <a href="https://www.instagram.com/naufalhfzhn" style="color: #222222;" class="btn">instagram/naufalhfzhn </a></p>
           <!-- end Instagram --> <br>
-          <blockquote>
-            <p></p>
-          </blockquote>
-          <!-- end quote -->
         </div>
       </section>
       <!-- END CONTACT SECTION -->
 
-      <div class="line-break last-break"></div>
-
       <section id="footer">
         <footer class="container">
-          <p><span class="made"></span> dengan <span class="happy"></span> dan <span class="love"></span>, dan gak perlu hak cipta.</p>
+          <h1 class="title"></h1>
+          <blockquote>
+            <p></p>
+          </blockquote>
+          <p class="desk">HR. Ahmad, ath-Thabrani, ad-Daruqutni</p>
         </footer>
       </section>
       <!--  END FOOTER SECTION-->
@@ -57,12 +63,7 @@
     </div>
 
     <!-- JS -->
-    <script>
-      var anchor = document.querySelectorAll('a');for(var i=0;i<anchor.length;i++){anchor[i].setAttribute('target', '_blank');}
-      // give target _blank to all link
-      var parent = document.body & document.documentElement,child = document.querySelectorAll('.site-wrapper');child[0].style.right = child[0].clientWidth - child[0].offsetWidth + "px";
-      // hide scrollbar
-    </script>
+    <script src="assets/js/script.js"></script>
     <!-- Jiaah ngeliatin code mulu, Jomblo ya? hihihihi -->
   </body>
 </html>
