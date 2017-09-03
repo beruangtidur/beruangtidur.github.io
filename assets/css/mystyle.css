@@ -244,14 +244,12 @@ blockquote::after{
   #home .container{
     flex-flow: nowrap column;
   }
+  #home .container .right-side{
+    margin-top: 30px;
+  }
   .control{
     top: 0 ;
     transform: translateY(0);
-  }
-}
-@media only screen and (max-width : 960px) {
-  #home .container .right-side{
-    margin-top: 30px;
   }
 }
 @media only screen and (max-width : 1080px) {
