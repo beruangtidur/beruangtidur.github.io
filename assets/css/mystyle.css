@@ -52,10 +52,10 @@ html,body{
   position:absolute;
   bottom:3px;left:0;
   width:100%;
-  height: 5px;
+  height: 50%;
   transition:.3s ease-in-out;
 }
-.mix-blend:hover::after{height:50%;transition:.3s ease-in-out}
+.mix-blend:hover::after{height:3px;transition:.3s ease-in-out}
 .btn{ overflow: hidden;font-size: 1.5em;cursor: pointer;position: relative;}
 .title-section{
   font-weight: normal;
@@ -243,14 +243,12 @@ blockquote::after{
   #home .container{
     flex-flow: nowrap column;
   }
+  #home .container .right-side{
+    margin-top: 30px;
+  }
   .control{
     top: 0 ;
     transform: translateY(0);
-  }
-}
-@media only screen and (max-width : 960px) {
-  #home .container .right-side{
-    margin-top: 30px;
   }
 }
 @media only screen and (max-width : 1080px) {
