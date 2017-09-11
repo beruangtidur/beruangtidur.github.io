@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
 
 *{
   transition: .5s ease-in-out;
@@ -23,21 +22,28 @@
 /* SELECTION*/
 a{
   color: #333333;
-  text-decoration: underline;
+  font-weight: bold;
 }
 a:hover{
   color: #333333;
 }
+a::after{
+  content: '';
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  display: inline-block;
+  background: url('../img/icons/logout-sketch.png') no-repeat;
+  background-size: 15px 15px;
+}
 html, body{
-  /*font-family: 'Dawning Of a New Day', monospace;*/
-  /*font-family: 'Crafty Girls', monospace;*/
-  font-family: 'Roboto Mono', monospace;
-  /*font-family: 'Cabin Sketch', cursive;*/
+  font-family: 'The Girl Next Door', 'Roboto Mono', cursive;
+  /*font-family: 'Roboto Mono', 'Roboto Mono', cursive;*/
+  font-size: 14px;
   background-color: #f9f9f9;
   color: #4e4e4e;
   width: 100%;
-  /*height: 100%;*/
-  /*overflow: hidden;*/
+  word-wrap: break-word;
 }
 .row{
   margin: 0;
@@ -46,47 +52,92 @@ html, body{
 
 /*======================================================================*/
 
-.mix-blend{z-index: 1}
-.mix-blend::after{
-  content: '';
-  display: block;
-  z-index: -1;
-  position:absolute;
-  bottom:3px;left:0;
-  width:100%;
-  height: 50%;
-  transition:.3s ease-in-out;
-}
-.mix-blend:hover::after{height:3px;transition:.3s ease-in-out}
-.btn{ overflow: hidden;font-size: 1.5em;cursor: pointer;position: relative;}
+/*.btn{ overflow: hidden;font-size: 1.5em;cursor: pointer;position: relative;}*/
 .title-section{
-  font-weight: normal;
-  font-size: 2.5em;
+  font-weight: bold;
+  font-size: 2.1em;
 }
 .desk{
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 .container{
   width: 90%;
   margin: auto;
 }
 .line-break{
-  width: 50vw;
-  border: 2px dashed #4e4e4e;
+  width: 50%;
+  height: 5px;
+  border-radius: 100% 0;
+  background: #4e4e4e;
   margin: 30px auto;
 }
 /* GLOBAL USE*/
 
+.site-wrapper{
+  padding: 40px;
+}
 
+/*PROFILE DESK SECTION*/
+.desk a{
+  font-size: 1.4em;
+}
+a[href*="github"]{color: blueviolet;}
+a[href*="ga"]{color: crimson;}
+a[href*="insta"]{color: #b8cd0b;}
+a[href*="@gmail"]{color: #0e87b4;}
+.fancy span:hover{top:3px}
+.fancy span:nth-child(n+6){text-shadow:#cbc4c4 -3px 3px 0}
+
+
+/*PHOTO SECTION*/
+#myPhoto{
+  position: static;
+  height: 100%;
+  padding-bottom: 50px;
+}
 #pp{
   width: 90%;
-  min-height: 600px;
-  margin: auto;
+  height: 300px;
+  max-height: 100%;
   background: url('../img/smilling-at-u.png') center top no-repeat;
   background-size: auto 100%;
   background-clip: border-box;
-  border-radius: 100%;
+  border-radius: 50%;
+}
+footer{
+  margin-top: 10px;
+  width:90%;
+  text-align: center;
+  font-weight: bold;
 }
 
 /*================= RESPONSIVE MODE ================*/
-/* Smartphones (portrait and landscape) ----------- */
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  html, body{font-size: 16px;}
+  #myPhoto{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+  }
+  #pp{
+    height: 50%;
+  }
+}
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  #pp{
+    height: 80%;
+    max-height: 100%;
+  }
+  footer{
+    text-align: right;
+  }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { ... }
