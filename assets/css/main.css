@@ -48,6 +48,10 @@ html, body{
 .row{
   margin: 0;
 }
+[class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 /* END CSS RESET*/
 
 /*======================================================================*/
@@ -73,6 +77,7 @@ html, body{
 }
 /* GLOBAL USE*/
 
+
 .site-wrapper{
   padding: 40px;
 }
@@ -85,15 +90,14 @@ a[href*="github"]{color: blueviolet;}
 a[href*="ga"]{color: crimson;}
 a[href*="insta"]{color: #b8cd0b;}
 a[href*="@gmail"]{color: #0e87b4;}
-.fancy span:hover{top:3px}
-.fancy span:nth-child(n+6){text-shadow:#cbc4c4 -3px 3px 0}
+.fancy span:hover{top:3px;}
+.fancy span:nth-child(n+6){text-shadow:#cbc4c4 -3px 3px 0;}
 
 
 /*PHOTO SECTION*/
 #myPhoto{
   position: static;
   height: 100%;
-  padding-bottom: 50px;
 }
 #pp{
   width: 90%;
@@ -109,6 +113,7 @@ footer{
   width:90%;
   text-align: center;
   font-weight: bold;
+  padding-bottom: 50px;
 }
 
 /*================= RESPONSIVE MODE ================*/
@@ -121,8 +126,13 @@ footer{
   #myPhoto{
     position: fixed;
     right: 0;
-    bottom: 0;
-    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column;
   }
   #pp{
     height: 50%;
@@ -132,7 +142,6 @@ footer{
 @media (min-width: 992px) {
   #pp{
     height: 80%;
-    max-height: 100%;
   }
   footer{
     text-align: right;
