@@ -55,7 +55,7 @@
 
         <div id="myPhoto" class="col-12 col-md-6 order-1">
           <div id="pp"></div>
-          <footer>[footer] =&gt; string(34)"@naufalhfzhn - it's all about love"</footer>
+          <footer>Handmade with <i class="fa fa-heart" style="color:crimson;" aria-hidden="true"></i></footer>
         </div>
         <!-- PP COLUMN-->
       </div>
@@ -66,14 +66,18 @@
 
 
     <!-- Optional JavaScript -->
+    <!--  Font Awesome-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="assets/js/lettering.min.js"></script>
+    <script src="https://use.fontawesome.com/7b02b9e826.js"></script>
     <!-- Jiaah ngeliatin code mulu, Jomblo ya? hihihihi -->
     <script type="text/javascript">
-    var anchor = document.querySelectorAll('a');for(var i=0;i<anchor.length;i++){anchor[i].setAttribute('target', '_blank');}
+    var anchor = document.querySelectorAll('a'), i;
+    for(i=0;i<anchor.length;i++){anchor[i].setAttribute('target', '_blank');anchor[i].innerHTML += "<i class=\"fa fa-external-link\" aria-hidden=\"true\"></i>";}
+    // give each anchor target_blank and give external link icon
       $(document).ready(function () {
         $(".fancy").lettering();
       });
