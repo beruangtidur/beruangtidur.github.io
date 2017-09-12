@@ -124,7 +124,7 @@ a[href*="#coll"]:hover{ text-decoration: none;}
   font-size: 1.4em;
 }
 a[href*="github"]{color: blueviolet;}
-a[href*="ga"]{color: crimson;}
+a[href*="note"]{color: crimson;}
 a[href*="insta"]{color: #b8cd0b;}
 a[href*="@gmail"]{color: #0e87b4;}
 .fancy span:hover{top:3px;}
