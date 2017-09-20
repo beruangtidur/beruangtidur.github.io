@@ -36,6 +36,8 @@ html, body{
 }
 .row{
   margin: 0;
+  padding: 20px;
+  background: #fafafa;
 }
 [class*="col-"] {
     padding-left: 0 !important;
@@ -68,7 +70,8 @@ html, body{
 
 
 .site-wrapper{
-  padding: 40px;
+  padding: 10px;
+  background: #4e4e4e;
 }
 
 /*PROFILE DESK SECTION*/
@@ -97,10 +100,10 @@ a[href*="#coll"]:hover{ text-decoration: none;}
   0%{transform: rotate(90deg);}
   100%{transform: rotate(180deg);}
 }
-.bar1{
+.collapsed .bar1{
   animation: bar1 .5s forwards ease-in-out;
 }
-.barChanged .bar1{
+ .bar1{
   animation-delay: .25s;
   animation: bar1Changed .5s forwards ease-in-out;
 }
@@ -113,10 +116,10 @@ a[href*="#coll"]:hover{ text-decoration: none;}
   0%{transform: rotate(0deg);}
   100%{transform: rotate(180deg);}
 }
-.bar2{
+.collapsed  .bar2{
   animation: bar2 .5s ease-in-out;;
 }
-.barChanged .bar2{
+.bar2{
   animation: bar2Changed .5s forwards ease-in-out;
 }
 
@@ -141,19 +144,22 @@ a[href*="@gmail"]{color: #0e87b4;}
   width: 90%;
   height: 300px;
   max-height: 100%;
+  margin: auto;
   background: url('../img/smilling-at-u.png') center top no-repeat;
   background-size: auto 100%;
   background-clip: border-box;
   border-radius: 50%;
 }
 footer{
-  margin-top: 10px;
+  margin: 10px auto auto auto;
   width:90%;
   text-align: center;
   font-weight: bold;
   padding-bottom: 50px;
 }
-
+footer::before{
+  content: 'It\'s All about ';
+}
 /*================= RESPONSIVE MODE ================*/
 /*// Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {}
