@@ -30,7 +30,7 @@ a:hover{
 html{
   border-top: 5px solid #4e4e4e;
   border-bottom: 5px solid #4e4e4e;
-
+  min-height: 100%;
 }
 html, body{
   font-family: 'Purisa', 'comfortaa', cursive;
@@ -38,7 +38,6 @@ html, body{
   background-color: #fafafa;
   color: #4e4e4e;
   width: 100%;
-  min-height: 100%;
 }
 .row{
   margin: 0;
