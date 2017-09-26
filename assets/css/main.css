@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
-
+@font-face { font-family: 'Purisa'; src: url('../fonts/Purisa.ttf') format('truetype');}
 *{
   transition: .5s ease-in-out;
 }
@@ -27,8 +27,13 @@ a{
 a:hover{
   color: #333333;
 }
+html{
+  border-top: 5px solid #4e4e4e;
+  border-bottom: 5px solid #4e4e4e;
+  min-height: 100%;
+}
 html, body{
-  font-family: 'Comfortaa', cursive;
+  font-family:  'comfortaa', cursive;
   font-size: 14px;
   background-color: #fafafa;
   color: #4e4e4e;
@@ -68,11 +73,6 @@ html, body{
 }
 /* GLOBAL USE*/
 
-
-.site-wrapper{
-  padding: 10px;
-  background: #4e4e4e;
-}
 
 /*PROFILE DESK SECTION*/
 a[href*="#coll"]{ position: relative;color: #4e4e4e;}
@@ -158,6 +158,7 @@ footer{
   padding-bottom: 50px;
 }
 footer::before{
+  font-family: 'Purisa', 'comfortaa', cursive;
   content: 'It\'s All about ';
 }
 /*================= RESPONSIVE MODE ================*/
