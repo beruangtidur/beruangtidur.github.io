@@ -1,0 +1,103 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/icons/favicon.png">
+    <title>Naufalhfzhn ~</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="row">
+
+        <div id="myProfile" class="col-12 col-md-6 order-12">
+
+          <div class="row">
+            <div class="col-12">
+              <a href="#colldesk1" data-toggle="collapse" aria-expanded="false" aria-controls="colldesk1">
+                <div class="barWrapper"><span class="bar bar1"></span><span class="bar bar2"></span></div>
+                <h1 class="title-section fancy">HAI! Saya Naufal Hafizhan...</h1>
+              </a>
+              <p id="colldesk1" class="desk collapse">Orangnya kalem, simpel, gak ribet, dan gak mau terlalu banyak mikir. Pokoknya yang baik-baik :).<br>
+                Liat project2 saya di <a href="https://www.github.com/naufalhfzhn">github/naufalhfzhn</a><br>
+                <!-- end github -->
+                dan kalo mau baca2 di <a href="http://note.naufalhfzhn.ga">naufalhfzhn/notes</a>
+                <!-- end notes -->
+              </p>
+            </div>
+          </div>
+
+          <div class="line-break"></div>
+
+          <div class="row">
+            <div class="col-12">
+              <a href="#colldesk2" data-toggle="collapse" aria-expanded="false" aria-controls="colldesk2">
+                <div class="barWrapper"><span class="bar bar1"></span><span class="bar bar2"></span></div>
+                <h1 class="title-section">Kalo mau nanya atau kenalan</h1>
+              </a>
+              <p id="colldesk2" class="desk collapse">Email aja ke : <a href="mailto:raden.naufal123@gmail.com">raden.naufal123@gmail.com</a></p>
+              <!-- end Gmail -->
+            </div>
+
+            <div class="line-break"></div>
+
+            <div class="col-12">
+              <a href="#colldesk3" data-toggle="collapse" aria-expanded="false" aria-controls="colldesk3">
+                <div class="barWrapper"><span class="bar bar1"></span><span class="bar bar2"></span></div>
+                <h1 class="title-section">Nah kalo mau liat2 atau stalking2 gitu</h1>
+              </a>
+              <p id="colldesk3" class="desk collapse"> bisa di <a href="https://www.instagram.com/naufalhfzhn">instagram/naufalhfzhn</a></p>
+              <!-- end Instagram --> <br>
+              </div>
+          </div>
+
+        </div>
+        <!-- CONTENT COLUMN-->
+
+        <div id="myPhoto" class="col-12 col-md-6 order-1">
+          <div id="pp"></div>
+          <footer><i class="fa fa-heart" style="color:crimson;" aria-hidden="true"></i></footer>
+        </div>
+        <!-- PP COLUMN-->
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- END BOOTSTRAP PACKAGE -->
+    <script src="assets/js/lettering.min.js"></script>
+    <!-- END LETERRING JS -->
+    <script src="https://use.fontawesome.com/7b02b9e826.js"></script>
+    <!-- END FONT AWESOME -->
+    <!-- Jiaah ngeliatin code mulu, Jomblo ya? hihihihi -->
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+      var anchor = document.querySelectorAll('.desk a'), i;
+      for(i=0;i<anchor.length;i++){anchor[i].setAttribute('target', '_blank');anchor[i].innerHTML += "<i class=\"fa fa-external-link\" aria-hidden=\"true\"></i>";}
+      // give each anchor target_blank and give external link icon
+
+        $(".fancy").lettering();
+      // Fancy Lettering Js Func
+
+      var collDesk = document.querySelectorAll('p[id*=colldesk]');
+      for (var i = 0; i < collDesk.length; i++) {
+        collDesk[i].className += " show";
+      }
+      // show desk on default
+
+      var collTgl = document.querySelectorAll('a[href*=coll]');
+
+    });
+    </script>
+  </body>
+</html>
