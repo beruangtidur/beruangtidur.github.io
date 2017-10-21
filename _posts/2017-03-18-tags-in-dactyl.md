@@ -1,11 +1,12 @@
 ---
 layout: post
-title: 'Tags in dactl'
+title: Tags in dactl
 tags:
   - dactl
   - howto
-hero: https://source.unsplash.com/collection/427433/
+hero: 'https://source.unsplash.com/collection/427433/'
 overlay: green
+published: false
 ---
 
 Tags are built using Jekyll's native categories functionality and you need to add them manually as files before using them in posts. Read on to learn how.
