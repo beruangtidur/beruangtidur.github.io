@@ -1,12 +1,13 @@
 ---
 layout: post
-title: 'Layout settings and more in _config.yml'
+title: Layout settings and more in _config.yml
 tags:
   - jekyll
   - dactl
   - howto
-hero: https://source.unsplash.com/collection/582860/
+hero: 'https://source.unsplash.com/collection/582860/'
 overlay: red
+published: false
 ---
 
 All of the dactl's configurations has to be set in `_config.yml` file. Read on for explanation of all of the features that you can toggle, including configuring the layout.
