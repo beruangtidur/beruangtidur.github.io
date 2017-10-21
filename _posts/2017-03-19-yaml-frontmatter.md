@@ -5,8 +5,9 @@ tags:
   - jekyll
   - dactl
   - howto
-hero: https://source.unsplash.com/collection/345758/
+hero: 'https://source.unsplash.com/collection/345758/'
 overlay: orange
+published: false
 ---
 
 In order to use dactl's post images with overlays you'll need to learn how to set them. You do that in post's YAML frontmatter and I'll show you how.
