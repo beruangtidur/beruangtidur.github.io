@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa');
-@font-face { font-family: 'Purisa'; src: url('../fonts/Purisa.ttf') format('truetype');}
+@font-face { font-family: 'LitteMissPriss'; src: url('../fonts/LittleMissPriss.ttf') format('truetype');}
 *{
   transition: .5s ease-in-out;
 }
@@ -28,12 +27,11 @@ a:hover{
   color: #333333;
 }
 html{
-  border-top: 5px solid #4e4e4e;
-  border-bottom: 5px solid #4e4e4e;
+  border-top: 2px solid #4e4e4e;
   min-height: 100%;
 }
 html, body{
-  font-family:  'comfortaa', cursive;
+  font-family:  'littlemisspriss', cursive;
   font-size: 14px;
   background-color: #fafafa;
   color: #4e4e4e;
@@ -42,11 +40,6 @@ html, body{
 .row{
   margin: 0;
   padding: 20px;
-  background: #fafafa;
-}
-[class*="col-"] {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
 }
 /* END CSS RESET*/
 
@@ -54,10 +47,10 @@ html, body{
 
 .title-section{
   font-weight: bold;
-  font-size: 2.1em;
+  font-size: 2.3em;
 }
 .desk{
-  font-size: 1.2em;
+  font-size: 1.4em;
   word-wrap: break-word;
 }
 .container{
@@ -105,6 +98,8 @@ a[href*="#coll"]:hover{ text-decoration: none;}
 }
  .bar1{
   animation-delay: .25s;
+  animation-fill-mode: backwards;
+  animation-direction: alternate;
   animation: bar1Changed .5s forwards ease-in-out;
 }
 /* END BAR1 */
@@ -155,11 +150,8 @@ footer{
   width:90%;
   text-align: center;
   font-weight: bold;
+  font-size: 1.2em;
   padding-bottom: 50px;
-}
-footer::before{
-  font-family: 'Purisa', 'comfortaa', cursive;
-  content: 'It\'s All about ';
 }
 /*================= RESPONSIVE MODE ================*/
 /*// Small devices (landscape phones, 576px and up)*/
