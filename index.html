@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/img/icons/favicon.png">
+    <!-- Meta Tag -->
+
     <title>Beruang Tidur ~</title>
 
     <!-- Bootstrap CSS -->
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
 
   </head>
   <body>
@@ -23,12 +24,12 @@
 
           <div class="row">
             <div class="col-12">
-              <a href="#colldesk1" data-toggle="collapse" aria-expanded="false" aria-controls="colldesk1">
+              <a href="#colldesc1" data-toggle="collapse" aria-expanded="false" aria-controls="colldesc1">
                 <div class="barWrapper"><span class="bar bar1"></span><span class="bar bar2"></span></div>
                 <h1 class="title-section fancy">HAI! Saya Naufal Hafizhan...</h1>
               </a>
-              <p id="colldesk1" class="desk collapse">Orangnya kalem, simpel, gak ribet, dan gak mau terlalu banyak mikir. Pokoknya yang baik-baik :).<br>
-                Liat project2 saya di <a href="https://www.github.com/naufalhfzhn">github/naufalhfzhn</a><br>
+              <p id="colldesc1" class="desc collapse">Orangnya kalem, simpel, gak ribet, dan gak mau terlalu banyak mikir. Pokoknya yang baik-baik :).<br>
+                Liat project2 saya di <a href="https://www.github.com/beruangtidur">github/naufalhfzhn</a><br>
                 <!-- end github -->
                 dan kalo mau baca2 di <a href="ngeblog/">naufalhfzhn/ngeblog</a>
                 <!-- end notes -->
@@ -40,22 +41,22 @@
 
           <div class="row">
             <div class="col-12">
-              <a href="#colldesk2" data-toggle="collapse" aria-expanded="false" aria-controls="colldesk2">
+              <a href="#colldesc2" data-toggle="collapse" aria-expanded="false" aria-controls="colldesc2">
                 <div class="barWrapper"><span class="bar bar1"></span><span class="bar bar2"></span></div>
                 <h1 class="title-section">Kalo mau nanya atau kenalan</h1>
               </a>
-              <p id="colldesk2" class="desk collapse">Email aja ke : <a href="mailto:raden.naufal123@gmail.com">raden.naufal123@gmail.com</a></p>
+              <p id="colldesc2" class="desc collapse">Email aja ke : <a href="mailto:raden.naufal123@gmail.com">raden.naufal123@gmail.com</a></p>
               <!-- end Gmail -->
             </div>
 
             <div class="line-break"></div>
 
             <div class="col-12">
-              <a href="#colldesk3" data-toggle="collapse" aria-expanded="false" aria-controls="colldesk3">
+              <a href="#colldesc3" data-toggle="collapse" aria-expanded="false" aria-controls="colldesc3">
                 <div class="barWrapper"><span class="bar bar1"></span><span class="bar bar2"></span></div>
                 <h1 class="title-section">Nah kalo mau liat2 atau stalking2 gitu</h1>
               </a>
-              <p id="colldesk3" class="desk collapse"> bisa di <a href="https://www.instagram.com/naufalhfzhn">instagram/naufalhfzhn</a></p>
+              <p id="colldesc3" class="desc collapse"> bisa di <a href="https://www.instagram.com/naufalhfzhn">instagram/naufalhfzhn</a></p>
               <!-- end Instagram --> <br>
               </div>
           </div>
@@ -82,24 +83,18 @@
     <!-- END FONT AWESOME -->
     <!-- Jiaah ngeliatin code mulu, Jomblo ya? hihihihi -->
     <script type="text/javascript">
-    $(document).ready(function () {
+      $(document).ready(function () {
 
-      var anchor = document.querySelectorAll('.desk a'), i;
-      for(i=0;i<anchor.length;i++){anchor[i].setAttribute('target', '_blank');anchor[i].innerHTML += "<i class=\"fa fa-external-link\" style=\"font-size\:0.7em\" aria-hidden=\"true\"></i>";}
-      // give each anchor target_blank and give external link icon
+        $('.desc a').attr('target', '_blank').append('<i class=\"fa fa-external-link\" style=\"font-size\:0.7em\" aria-hidden=\"true\"></i>');
+        // give external link icon 
 
         $(".fancy").lettering();
-      // Fancy Lettering Js Func
+        // Fancy Lettering Js Func
 
-      var collDesk = document.querySelectorAll('p[id*=colldesk]');
-      for (var i = 0; i < collDesk.length; i++) {
-        collDesk[i].className += " show";
-      }
-      // show desk on default
+        $('p[id*=colldesc]').addClass('show');
+        //show desc on default
 
-      var collTgl = document.querySelectorAll('a[href*=coll]');
-
-    });
+      });
     </script>
   </body>
 </html>

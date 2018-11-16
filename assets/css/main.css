@@ -48,7 +48,7 @@ html, body{
   font-weight: bold;
   font-size: 2.3em;
 }
-.desk{
+.desc{
   font-size: 1.4em;
   word-wrap: break-word;
 }
@@ -117,7 +117,7 @@ a[href*="#coll"]:hover{ text-decoration: none;}
   animation: bar2Changed .5s forwards ease-in-out;
 }
 
-.desk a{
+.desc a{
   font-size: 1.4em;
 }
 a[href*="github"]{color: blueviolet;}
