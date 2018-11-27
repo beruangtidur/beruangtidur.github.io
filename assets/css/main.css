@@ -139,7 +139,7 @@ a[href*="@gmail"]{color: #0e87b4;}
   height: 300px;
   max-height: 100%;
   margin: auto;
-  background: url('../img/smilling-at-u.png') center top no-repeat;
+  background: url('..//img/beruangtidur.png') center top no-repeat;
   background-size: auto 100%;
   background-clip: border-box;
   border-radius: 50%;
@@ -153,8 +153,13 @@ footer{
   padding-bottom: 50px;
 }
 /*================= RESPONSIVE MODE ================*/
-/*// Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {}
+/*// Small devices */
+@media (max-width: 576px) {
+  #pp{
+    background-size: 100% auto;
+    border-radius: 0;
+  }
+}
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
